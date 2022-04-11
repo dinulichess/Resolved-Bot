@@ -2,13 +2,13 @@ token: "Set your token here"         # Lichess OAuth2 Token.
 
 engine:                                   # Engine settings.
   dir: "./engines"               # Directory containing the engine.
-  name: "stockfish"        # Binary name of the engine to use.
+  name: "StarTwinkLight_Standard"        # Binary name of the engine to use.
   ponder: true                            # Think on opponent's time.
   polyglot:
     enabled: true                         # Activate polyglot book.
     books:
-      white: "Lichess-Endogenetic-Bot-Book"                      # Name of the book to use as white.
-      black: "elo3300"                         # Name of the book to use as black.
+      white: "StarTwinkLight-book"                      # Name of the book to use as white.
+      black: "Cerebellum3Merge"                         # Name of the book to use as black.
       standard: null            # Name of the book to use if there is no specific book for white, black or chess960.
       chess960: null                      # Name of the book to use for Chess960.
     selection: "best_move"                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
@@ -40,13 +40,13 @@ engine:                                   # Engine settings.
     score: -1000                          # If the score is less than or equal to this value, the bot resigns (in cp).
     consecutive_moves: 5                  # How many moves in a row the score has to be below the resign value.
   uci_options:                            # Arbitrary UCI options passed to the engine. (Commenting allowed)
-    Move Overhead: 280
+    Move Overhead: 350
     Threads: 3                            # Max CPU threads the engine can use.
     Hash: 128                             # Max memory (in megabytes) the engine can allocate.
     Skill Level: 20
     UCI_Elo : 2850
-    MultiPV: 17
-    Slow Mover: 40
+    MultiPV: 20
+    Slow Mover: 50
 
 move_overhead_multiplier: 3.0              # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
 
@@ -89,5 +89,5 @@ matchmaking:
 
 
 books: 
-    Lichess-Endogenetic-Bot-Book: "./engines/Lichess-Endogenetic-Bot-Book.bin"  # Name of the opening book (to be used above in the polyglot section) and path to the polyglot opening book.  
-    elo3300: "./engines/elo3300.bin"
+    StarTwinkLight-book: "./engines/StarTwinkLight-book.bin"  # Name of the opening book (to be used above in the polyglot section) and path to the polyglot opening book.  
+    Cerebellum3Merge: "./Cerebellum3Merge.bin"
