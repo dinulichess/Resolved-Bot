@@ -80,7 +80,7 @@ class Game_api:
             else:
                 print(event)
                 
-         self.api.send_chat_message(self.game_id, "player", "Good game, Thanks for playing with me.")
+         self.api.send_chat_message(self.game_id, "player", "Good game!Thanks for playing with me.")
          self.api.send_chat_message(self.game_id, "player", "Do not forget to rematch me.")
 
         self.api.send_chat_message(self.game_id, "spectator", "Hope you enjoy my game!")
