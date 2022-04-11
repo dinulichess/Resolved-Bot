@@ -22,11 +22,12 @@ class Game_api:
         game_queue_thread.start()
         
         
-        self.api.send_chat_message(self.game_id, "player", "Hello!Welcome to the game!Type !help for a list of commands.")
+        self.api.send_chat_message(self.game_id, "player", "Hello, Welcome to the game! Type !help for commands I can respond to.")
         self.api.send_chat_message(self.game_id, "player", "I wish you good luck!")
 
-        self.api.send_chat_message(self.game_id, "spectator", "Welcome to the game spectators!")
-        self.api.send_chat_message(self.game_id, "spectator", "Enjoy my game by seeing it!")
+        self.api.send_chat_message(self.game_id, "spectator", "Welcome  to the game spectators!")
+        self.api.send_chat_message(self.game_id, "spectator", "Type !help to see my commands")
+
 
 
         while True:
@@ -80,11 +81,11 @@ class Game_api:
             else:
                 print(event)
                 
-         self.api.send_chat_message(self.game_id, "player", "Good game!Thanks for playing with me.")
-         self.api.send_chat_message(self.game_id, "player", "Do not forget to rematch me.")
+        self.api.send_chat_message(self.game_id, "player", "Thanks for playing with me!")
+        self.api.send_chat_message(self.game_id, "player", "Good Game!!")
 
-        self.api.send_chat_message(self.game_id, "spectator", "Hope you enjoy my game!")
-        self.api.send_chat_message(self.game_id, "spectator", "Thanks for watching my games!")
+        self.api.send_chat_message(self.game_id, "spectator", "Thanks for watching my game!")
+        self.api.send_chat_message(self.game_id, "spectator", "Do not forget to Challenge me when I am not playing any game!")
 
 
         print('Game over')
